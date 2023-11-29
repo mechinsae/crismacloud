@@ -24,7 +24,6 @@ jobs:
 
       - name: Build the image
         run: |
-          cat ${{ github.repository }}
           cat ${{ github.action_path }}
           cat ${{ github.action_repository }}
           cat <<EOF | tee /home/runner/work/raymond/raymond/Dockerfile
