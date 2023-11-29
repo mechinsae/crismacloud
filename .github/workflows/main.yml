@@ -24,9 +24,7 @@ jobs:
 
       - name: Build the image
         run: |
-          cat ${{ github.action_path }}
-          cat ${{ github.action_repository }}
-          cat <<EOF | tee /home/runner/work/raymond/raymond/Dockerfile
+          cat <<EOF | tee ${{ github.action_path }}/Dockerfile
           FROM nginx:1.21
           EXPOSE 80
           CMD ["nginx", "-g", "daemon off;"]
